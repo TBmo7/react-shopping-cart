@@ -13,6 +13,21 @@ function App() {
 
 	const addItem = item => {
 		// add the given item to the cart
+		console.log("LOGGING ITEM ENTERING ARRAY APP.JS",item)
+		
+		setCart(
+				[...cart,
+				{
+					id:item.id,
+					title:item.title,
+					price:item.price,
+					image:item.image
+				}
+			]
+			
+		)
+		console.log("LOGGING cart FROM ADD ITEM: APP.JS",cart)
+	
 	};
 
 	return (
